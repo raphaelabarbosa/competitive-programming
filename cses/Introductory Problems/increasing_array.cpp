@@ -10,11 +10,13 @@ int main(){
     while(t--){
         int n; cin >> n;
         ll moves = 0; 
-        int pre; cin >> pre;
+        int pre; cin >> pre; 
         for(int i = 1; i < n; i++){
-            int curr; cin >> curr;
-            if(curr < pre) moves += (pre - curr);
-            else pre = curr;
+            int curr; cin >> curr; 
+            // Se o número atual for menor que o anterior, precisamos aumentá-lo
+            // até que seja igual ao anterior (para manter a sequência não decrescente)
+            if(curr < pre) moves += (pre - curr); 
+            else pre = curr; //Caso contrário, o número atual permanece igual.
         }
         cout << moves << '\n';
     }

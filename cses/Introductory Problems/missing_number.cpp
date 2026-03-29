@@ -9,11 +9,13 @@ int main(){
     int t = 1;
     while(t--){
         ll n; cin >> n;
-        ll soma = 0;
+        ll sum = 0;
         for(int i = 0; i < n-1; i++){
-            int x; soma += (cin >> x,x);
+            int x; sum += (cin >> x,x);
         }
-        cout << ((n*n+n)/2) - soma << '\n';
+        //Calculamos a diferença entre a soma da PA de 1 até n e a soma dos valores lidos.
+        //O resultado é o número que está faltando na sequência.
+        cout << ((n*n+n)/2) - sum << '\n';
     }
     return 0;
 }

@@ -9,8 +9,10 @@ int main(){
     int t = 1;
     while(t--){
         string seq; cin >> seq; 
-        int sum = 1, MAX = 1;
+        int sum = 1, MAX = 1; // sum armazena o tamanho da sequência atual e MAX guarda o maior tamanho até o momento.
         for(int i = 1; i < seq.size(); i++){
+            // Se o caractere atual for igual ao anterior, incrementamos o tamanho da sequência atual.
+            // Caso contrário, iniciamos uma nova sequência com tamanho 1.
             sum = (seq[i] == seq[i-1]) ? sum+1 : 1;
             MAX = max(MAX,sum);
         }
